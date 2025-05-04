@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Tetris Oyunu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="start-screen" class="screen">
+    <h1>Web Tetris</h1>
+    <button id="start-button">Oyunu Başlat</button>
+    <div id="instructions">
+      <h2>Talimatlar</h2>
+      <ul>
+        <li>Blokları hareket ettirmek için Sol/Sağ ok tuşlarını kullanın</li>
+        <li>Blok düşüşünü hızlandırmak için Aşağı ok tuşunu kullanın</li>
+        <li>Blokları döndürmek için Yukarı ok tuşunu kullanın</li>
+      </ul>
+    </div>
+    <div id="high-score">En Yüksek Skor: 0</div>
+  </div>
+
+  <div id="game-screen" class="screen hidden">
+    <canvas id="game-canvas" width="300" height="600"></canvas>
+    <div id="score">Skor: 0</div>
+    <div id="timer">Süre: 0s</div>
+    <div id="touch-controls">
+      <button id="btn-left" class="control-btn" aria-label="Sol">&#8592;</button>
+      <button id="btn-right" class="control-btn" aria-label="Sağ">&#8594;</button>
+      <button id="btn-down" class="control-btn" aria-label="Aşağı">&#8595;</button>
+      <button id="btn-rotate" class="control-btn" aria-label="Döndür">&#10227;</button>
+    </div>
+  </div>
+
+  <div id="game-over-screen" class="screen hidden">
+    <h1>Oyun Bitti</h1>
+    <div id="final-score">Skorunuz: 0</div>
+    <button id="restart-button">Tekrar Oyna</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
